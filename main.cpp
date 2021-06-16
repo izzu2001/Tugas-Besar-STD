@@ -1,0 +1,62 @@
+#include "artikel.h"
+int main()
+{
+    listTag t;
+    listArtikel a;
+    createlistArtikel(a);
+    createlistTag(t);
+    cout<<"(a) Penambahan Data Artikel"<<endl;
+    insertArtikel("Makan Rujak",a);
+    insertArtikel("Main Engrang",a);
+    insertArtikel("Rumah Gadang",a);
+    insertArtikel("Bulutangkis",a);
+    insertArtikel("Seprak Takraw",a);
+    showArtikel(a);
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    cout<<"(b) Penambahan Data Tag"<<endl;
+    insertTag("Permainan","a", t);
+    insertTag("Arsitektur","b", t);
+    insertTag("Indonesia","c", t);
+    insertTag("Olahraga","a", t);
+    insertTag("Kuliner","b", t);
+    insertTag("Tradisional","a", t);
+    showTag(t);
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    cout<<"(c) Relasi Artikel dengan Tag"<<endl;
+    relasiArtikelTag(a,t,"Makan Rujak","Kuliner");
+    relasiArtikelTag(a,t,"Makan Rujak","Tradisional");
+    relasiArtikelTag(a,t,"Makan Rujak","Indonesia");
+    relasiArtikelTag(a,t,"Main Engrang","Indonesia");
+    relasiArtikelTag(a,t,"Main Engrang","Tradisional");
+    relasiArtikelTag(a,t,"Main Engrang","Olahraga");
+    relasiArtikelTag(a,t,"Main Engrang","Permainan");
+    relasiArtikelTag(a,t,"Rumah Gadang","Arsitektur");
+    relasiArtikelTag(a,t,"Rumah Gadang","Indonesia");
+    relasiArtikelTag(a,t,"Seprak Takraw","Olahraga");
+    relasiArtikelTag(a,t,"Seprak Takraw","Tradisional");
+    relasiArtikelTag(a,t,"Seprak Takraw","Permainan");
+    relasiArtikelTag(a,t,"Bulutangkis","Olahraga"); //Bulutangkis Sudah Dihapus
+    relasiArtikelTag(a,t,"Bulutangkis","Permainan");
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    cout<<"(d) Menghapus Data Artikel (contoh: Bulutangkis)"<<endl;
+    deleteArtikel("Bulutangkis",a);
+    showArtikel(a);
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    cout<<"(e) Menghapus Data Tag (contoh: Tradisional)"<<endl;
+    deleteTag("Tradisional",t);
+    showTag(t);
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    cout<<"(f) Menampilkan data keseluruhan Artikel beserta Tag pada Artikel tersebut"<<endl;
+    showAll(a);
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    cout<<"(g) Menampilkan Tag yang paling banyak digunakan"<<endl;
+    //showMostUsedTag(a,t);
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    cout<<"(h) Menampilkan Artikel yang memiliki Tag yang sama (contoh: Sepak Takraw)"<<endl;
+    //sameTagTipeArtikel(a,t,"Seprak Takraw");
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    cout<<"(i) Menampilkan Artikel dengan Tag tertentu"<<endl;
+    showWhichTagArtikel(a,t,"b");
+    cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+    return 0;
+}

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1609081853 source:c:\davih_msi\std\tubes\tubes_test3\tubes\main.cpp
+	"artikel.h"
+
+1609081915 source:c:\davih_msi\std\tubes\tubes_test3\tubes\artikel.cpp
+	"artikel.h"
+
+1609066769 c:\davih_msi\std\tubes\tubes_test3\tubes\artikel.h
+	<iostream>
+	<string>
+
